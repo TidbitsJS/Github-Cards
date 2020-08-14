@@ -4,15 +4,20 @@ class Cards extends Component {
     render() {
         const profile = this.props
         return (
-            <div className="container">
-            <div className="github-profile">
-                <img src={profile.avatar_url} alt="profile" />
-                <div className="info">
-                    <div className="name">{profile.name}</div>
-                    <div className="company">{profile.html_url}</div>
+            <div className="card mb-3 cards">
+             <div className="row no-gutters">
+              <div className="col-md-4">
+                <img src={profile.avatar_url} className="card-img" alt="profile" />
+              </div>
+              <div className="col-md-8">
+                <div className="card-body">
+                  <h5 className="card-title">{profile.name}</h5>
+                  <p className="card-text">{profile.html_url}</p>
+                  <p className="card-text"><small className="text-muted">{profile.company}</small></p>
                 </div>
+              </div>
             </div>
-            </div>
+          </div>
         )
     }
 }
