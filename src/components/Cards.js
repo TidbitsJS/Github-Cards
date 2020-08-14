@@ -11,9 +11,14 @@ class Cards extends Component {
               </div>
               <div className="col-md-8">
                 <div className="card-body">
-                  <h5 className="card-title">{profile.name}</h5>
+                  <h5 className="card-title">{profile.name ? profile.name : 'No name in Database'}</h5>
                   <p className="card-text">{profile.html_url}</p>
-                  <p className="card-text"><small className="text-muted">{profile.company}</small></p>
+                  <p className="card-text">
+                      <small className="text-muted"> 
+                       <i className="fa fa-building"></i> 
+                       {profile.company ? profile.company : 'Not Yet'}
+                      </small>
+                  </p>
                 </div>
               </div>
             </div>

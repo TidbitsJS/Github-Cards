@@ -21,7 +21,8 @@ class Forms extends Component {
            
            const data = {
             avatar_url: ErrorImage,
-            company: "No Man's Sky",
+            name: 'Error 404',
+            company: "Matrix",
             html_url: "https://github.com/nos"
            }
 
